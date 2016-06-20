@@ -5,12 +5,6 @@ file=$4
 output="$5.fasta"
 strand=$6
 
-echo "contig: $contigname"
-echo "start: $start"
-echo "end: $end"
-echo "file: $file"
-echo "output: $output"
-
 if [ "$contigname" == "" ]; then
 	echo "no contigname was provided"
 	exit
@@ -78,11 +72,9 @@ function getGene {
 
 case $strand in
 	"+")
-		echo "strand: $strand"
 		getGene $contigname $start $end $file > $output
 	;;
 	"-")
-		echo "strand: $strand"
 		getGene $contigname $start $end $file "c" | awk 'BEGIN{t["A"]="T";t["T"]="A";t["G"]="C";t["C"]="G";t["a"]="t";t["t"]="a";t["g"]="c";t["c"]="g";t["N"]="N";t["n"]="n";container=0;cposition=1;seq=""}
 			{
 				if(NR>1){
