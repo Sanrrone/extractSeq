@@ -15,7 +15,7 @@ Example:
 
 	bash extractSeq.bash contig0001 500 2000 Ecoli.fasta myoutput +
 
-This means that we dive in file Ecoli.fasta, searching the contig "contig0001" and then extract a sequence on the position 500 to 2000.
+This means that we dive in file Ecoli.fasta, searching the contig "contig0001" and then extract the sequence on the position 500 to 2000.
 
 Real example:
 In the example folder there is a fasta (Ecoli.fasta), where the contigs names are like:
