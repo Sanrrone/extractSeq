@@ -1,9 +1,15 @@
+if [[ "$@" =~ "--debug" ]]; then
+	set -ex
+else
+	set -e
+fi
+
 contigname=$1
 start=$2
 end=$3
 file=$4
 output="$5.fasta"
-strand=$6
+strand="$6"
 
 if [ "$contigname" == "" ]; then
 	echo "no contigname was provided"
@@ -64,7 +70,7 @@ function getGene {
 					cposition+=1
 				}
 			}
-			if($0~">"){
+			if($0~">" && cband==1){
 				exit
 			}
 		}' $4
