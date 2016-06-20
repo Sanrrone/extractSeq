@@ -49,6 +49,3 @@ Following the same example, the output is a fasta (testgene.fasta), with the pos
 	GTATCTATTATTGCCCGCATCATCCGCAGGGTAGTGTTGAAGAGTTTCGCCAGGTCTGCGA
 	CTGCCGCAAACCACATCCGGGGATGCTTTTGTCGGCACGCGATTATT
 	
-
-#Notes
-* Only tested in Mac OSX, but the syntaxis are just a bash script with awk code, if you have a problem in some linux distribution please let me know
