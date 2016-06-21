@@ -72,6 +72,7 @@ function getGene {
 				}
 			}
 			if($0~">" && cband==1){
+				printf "\n"
 				exit
 			}
 		}' $4

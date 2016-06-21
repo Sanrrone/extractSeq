@@ -49,3 +49,5 @@ Following the same example, the output is a fasta (testgene.fasta), with the pos
 	GTATCTATTATTGCCCGCATCATCCGCAGGGTAGTGTTGAAGAGTTTCGCCAGGTCTGCGA
 	CTGCCGCAAACCACATCCGGGGATGCTTTTGTCGGCACGCGATTATT
 	
+#NOTES
+Be careful with coordinates, if your contig have 100 nucleotides and you specify the coord 50,101. the script only write to 100.
