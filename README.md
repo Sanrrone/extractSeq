@@ -1,5 +1,5 @@
 # extractSeq
-extracSeq is a bash script (awk embebed), that giving a contig name and positions (start and end), return the corresponding sequence from your fasta.
+extracSeq is a bash script (awk embedded), that giving a contig name and positions (start and end), return the corresponding sequence from your fasta.
 
 ##Usage
 extractSeq need five (and intuitive), parameters (order is important):
