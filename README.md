@@ -32,7 +32,7 @@ This will give a testgene.fasta with the reverse complementary sequence.
 #Output
 Following the same example, the output is a fasta (testgene.fasta), with the positions in the header indicating if are complement or not:
 
-	>NODE_1_length_350779_cov_17.5196 c(500:1400)
+	>NODE_1_length_350779_cov_17.5196 Ecoli.fasta c(500:1400)
 	TCTTTCGGTGTATTGTCCAGCTCCAGCGGCAGAGCCACGTTGCCAAAAACAGTACGCGAAG
 	AGAGCAGGTTAAAATGCTGGAAAATCATACCAATCTGGCGGCGAGCTTTGGTCAACTCGGA
 	TTCTGACAGCGTGGTCAGTTCCTGTCCATCGACCAGCACGCTACCCTCGGTTGGGCGCTCC
