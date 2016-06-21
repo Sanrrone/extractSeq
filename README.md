@@ -1,7 +1,7 @@
 # extractSeq
 extracSeq is a bash script (awk embebed), that giving a contig name and positions (start and end), return the corresponding sequence from your fasta.
 
-#Usage
+##Usage
 extractSeq need five (and intuitive), parameters (order is important):
 
 * The contig name where are the coordinates that you want.
@@ -29,7 +29,7 @@ So, applying the usage will be:
 
 This will give a testgene.fasta with the reverse complementary sequence.
 
-#Output
+##Output
 Following the same example, the output is a fasta (testgene.fasta), with the positions in the header indicating if are complement or not:
 
 	>NODE_1_length_350779_cov_17.5196 Ecoli.fasta c(500:1400)
@@ -49,5 +49,5 @@ Following the same example, the output is a fasta (testgene.fasta), with the pos
 	GTATCTATTATTGCCCGCATCATCCGCAGGGTAGTGTTGAAGAGTTTCGCCAGGTCTGCGA
 	CTGCCGCAAACCACATCCGGGGATGCTTTTGTCGGCACGCGATTATT
 	
-#NOTES
+##NOTES
 Be careful with coordinates, if your contig have 100 nucleotides and you specify the coord 50,101. the script only write to 100.
