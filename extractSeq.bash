@@ -49,7 +49,7 @@ function getGene {
 		{
 			if($0 ~ contigname){
 				cband=1
-				print $0" "myfile" "strand"("start":"end")"
+				print $0"_"myfile"_"strand"("start":"end")"
 				next
 			}
 			if(cband==1){
