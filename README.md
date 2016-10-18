@@ -13,7 +13,7 @@ extractSeq need five (and intuitive), parameters (order is important):
 
 Example:
 
-	bash extractSeq.bash contig0001 500 2000 Ecoli.fasta myoutput +
+	bash extractSeq.bash contig0001 500 2000 + myoutput Ecoli.fasta
 
 This means that we dive in file Ecoli.fasta, searching the contig "contig0001" and then extract the sequence on the position 500 to 2000.
 
@@ -25,7 +25,7 @@ In the example folder there is a fasta (Ecoli.fasta), where the contigs names ar
 
 So, applying the usage will be:
 
-	bash extractSeq.bash NODE_1_length_350779_cov_17.5196 500 1400 example/Ecoli.fasta testgene -
+	bash extractSeq.bash NODE_1_length_350779_cov_17.5196 500 1400 - testgene example/Ecoli.fasta
 
 This will give a testgene.fasta with the reverse complementary sequence.
 
