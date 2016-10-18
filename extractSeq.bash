@@ -7,9 +7,9 @@ fi
 contigname=$1
 start=$2
 end=$3
-file=$4
+strand="$4"
 output="$5.fasta"
-strand="$6"
+file=$6
 
 if [ "$contigname" == "" ]; then
 	echo "no contigname was provided"
