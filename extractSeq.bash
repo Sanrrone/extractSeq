@@ -5,7 +5,7 @@ else
 fi
 
 if [[ "$@" =~ "-h" ]]; then
-	echo "* Usage: bash extractSeq.bash contigname start[int] end[int] fasta output strand[+/-]"
+	echo "* Usage: bash extractSeq.bash contigname start[int] end[int] strand[+/-] output file.fasta"
 	exit
 fi
 
@@ -32,21 +32,18 @@ if [ "$end" == "" ];then
 	exit
 fi
 
-if [ "$myfile" == "" ];then
-	echo "* no $myfile found"
-	exit
+if [ "$strand" == "" ];then
+	echo "* strand option default: +"
+	strand="+"
 fi
 
 if [ "$output" == ".fasta" ];then
 	output="output.fasta"
 fi
 
-if [ "$strand" == "" ];then
-	echo "* strand option default: +"
-	strand="+"
-fi
-if [ "$strand" != "+" ];then
-	strand="-"
+if [ "$myfile" == "" ];then
+	echo "* no $myfile found"
+	exit
 fi
 
 function getGene {
