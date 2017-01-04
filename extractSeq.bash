@@ -4,6 +4,11 @@ else
 	set -e
 fi
 
+if [[ "$@" =~ "-h" ]]; then
+	echo "* Usage: bash extractSeq.bash contigname start[int] end[int] fasta output strand[+/-]"
+	exit
+fi
+
 contigname=$1
 start=$2
 end=$3
@@ -13,22 +18,22 @@ myfile=$6
 
 
 if [ "$contigname" == "" ]; then
-	echo "no contigname was provided"
+	echo "* no contigname was provided"
 	exit
 fi
 
 if [ "$start" == "" ];then
-	echo "no start position was provided"
+	echo "* no start position was provided"
 	exit
 fi
 
 if [ "$end" == "" ];then
-	echo "no end position was provided"
+	echo "* no end position was provided"
 	exit
 fi
 
 if [ "$myfile" == "" ];then
-	echo "no $myfile found"
+	echo "* no $myfile found"
 	exit
 fi
 
@@ -37,7 +42,7 @@ if [ "$output" == ".fasta" ];then
 fi
 
 if [ "$strand" == "" ];then
-	echo "strand option default: +"
+	echo "* strand option default: +"
 	strand="+"
 fi
 if [ "$strand" != "+" ];then
