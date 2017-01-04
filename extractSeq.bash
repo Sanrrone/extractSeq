@@ -59,7 +59,7 @@ function getGene {
 				split($0, chars, "")
 				for(i=1;i<=length($0);i++){
 					if(cposition>=start && cposition<end){
-						if(container<60){
+						if(container<70){
 							printf "%c",chars[i]
 							container++	
 						}else{
@@ -86,7 +86,12 @@ case $strand in
 		getGene $contigname $start $end $myfile > $output
 	;;
 	"-")
-		getGene $contigname $start $end $myfile "c" | awk 'BEGIN{t["A"]="T";t["T"]="A";t["G"]="C";t["C"]="G";t["a"]="t";t["t"]="a";t["g"]="c";t["c"]="g";t["N"]="N";t["n"]="n";container=0;cposition=1;seq=""}
+		getGene $contigname $start $end $myfile "c" | awk 'BEGIN{t["A"]="T";t["T"]="A";t["G"]="C";t["C"]="G";
+		t["a"]="t";t["t"]="a";t["g"]="c";t["c"]="g";t["N"]="N";t["n"]="n";t[""]
+		t["R"]="Y";t["r"]="y";t["Y"]="R";t["y"]="r";t["K"]="M";t["M"]="K";t["k"]="m";t["m"]="k";
+		t["S"]="S";t["s"]="s";t["W"]="W";t["w"]="w";t["B"]="V";t["V"]="B";t["b"]="v";t["v"]="b";
+		t["D"]="H";t["H"]="D";t["d"]="h";t["h"]="d";t["d"]="h"
+		;container=0;cposition=1;seq=""}
 			{
 				if(NR>1){
 					seq=seq""$0
@@ -97,7 +102,7 @@ case $strand in
 			END{				
 				split(seq, chars, "")
 				for(i=length(seq);i>=1;i--){
-					if(container<60){
+					if(container<70){
 						printf "%c",t[chars[i]]
 						container++	
 					}else{

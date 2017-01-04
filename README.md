@@ -53,3 +53,6 @@ Following the same example, the output is a fasta (testgene.fasta), with the pos
 * Be careful with coordinates, if your contig have 100 nucleotides and you specify the coord 50,101. the script only write to 100.
 
 * Make sure the coordinates begin from lower value to upper e.g (1 10, 400 425, etc).
+* IUPAC ambiguity codes of the two possible nucleotides are converted as following: R↔Y, K↔M, S and W unchanged.
+* Ambiguity codes of the three possible nucleotides are converted as following: B↔V, D↔H.
+* Upper and lower case is preserved and can be used to mark regions of interest.
