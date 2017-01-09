@@ -45,7 +45,6 @@ if [ "$myfile" == "" ];then
 	echo "* no $myfile found"
 	exit
 fi
-
 function getGene {
 	myfile=$(echo "$4" |awk -F"/" '{print $NF}')
 	awk -v contigname="$1"  -v start="$2" -v end="$3" -v myfile="$myfile" -v strand="$5" 'BEGIN{cband=0;cposition=1;container=0}
@@ -80,7 +79,6 @@ function getGene {
 			}
 		}' $4
 }
-
 case $strand in
 	"+")
 		getGene $contigname $start $end $myfile > $output
@@ -123,5 +121,3 @@ case $strand in
 		exit
 	;;
 esac
-
-
