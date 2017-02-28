@@ -47,9 +47,9 @@ if [ "$myfile" == "" ];then
 fi
 function getGene {
 	myfile=$(echo "$4" |awk -F"/" '{print $NF}')
-	awk -v contigname="$1"  -v start="$2" -v end="$3" -v myfile="$myfile" -v strand="$5" 'BEGIN{cband=0;cposition=1;container=0}
+	awk -v contigname=">$1"  -v start="$2" -v end="$3" -v myfile="$myfile" -v strand="$5" 'BEGIN{cband=0;cposition=1;container=0}
 		{
-			if($0 ~ contigname){
+			if($0 == contigname){
 				cband=1
 				print $0"_"myfile"_"strand"("start":"end")"
 				next
