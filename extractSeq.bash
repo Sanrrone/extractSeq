@@ -82,6 +82,7 @@ function getGene {
 case $strand in
 	"+")
 		getGene $contigname $start $end $myfile > $output
+		echo "" >> $output
 	;;
 	"-")
 		getGene $contigname $start $end $myfile "c" | awk 'BEGIN{t["A"]="T";t["T"]="A";t["G"]="C";t["C"]="G";
@@ -115,6 +116,7 @@ case $strand in
 					cposition+=1
 				}
 			}' > $output
+			echo "" >> $output
 	;;
 	*)
 		echo "invalid strand"
